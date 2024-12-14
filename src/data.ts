@@ -555,8 +555,6 @@ export const products = [
   },
 ];
 
-
-
 export const singleUser = {
   id: 1,
   title: "John Doe",
