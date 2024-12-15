@@ -1,9 +1,9 @@
 import { topDealUsers } from "../../data.ts";
-import "./TopBox.scss";
+import "./TopDealsBox.scss";
 
-const TopBox = () => {
+const TopDealsBox = () => {
   return (
-    <div className="topBox">
+    <div className="topDealsBox">
       <h1>Top Deals</h1>
       <div className="list">
         {topDealUsers.map((user) => (
@@ -23,4 +23,4 @@ const TopBox = () => {
   );
 };
 
-export default TopBox;
+export default TopDealsBox;

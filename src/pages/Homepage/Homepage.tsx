@@ -1,8 +1,10 @@
+import AreaChartBox from "../../components/AreaChartBox/AreaChartBox";
 import BarChartBox from "../../components/BarChartBox/BarChartBox";
-import ChartBox from "../../components/ChartBox/ChartBox";
+import LineChartBox from "../../components/LineChartBox/LineChartBox";
 import PieChartBox from "../../components/PieChartBox/PieChartBox";
-import TopBox from "../../components/TopBox/TopBox";
+import TopDealsBox from "../../components/TopDealsBox/TopDealsBox";
 import {
+  areaChartData,
   barChartBoxRevenue,
   barChartBoxVisit,
   chartBoxConversion,
@@ -17,24 +19,26 @@ const Homepage = () => {
   return (
     <div className="home">
       <div className="box box1">
-        <TopBox />
+        <TopDealsBox />
       </div>
       <div className="box box2">
-        <ChartBox {...chartBoxUser} />
+        <LineChartBox {...chartBoxUser} />
       </div>
       <div className="box box3">
-        <ChartBox {...chartBoxProduct} />
+        <LineChartBox {...chartBoxProduct} />
       </div>
       <div className="box box4">
         <PieChartBox title="" chartData={pieChartData} />
       </div>
       <div className="box box5">
-        <ChartBox {...chartBoxConversion} />
+        <LineChartBox {...chartBoxConversion} />
       </div>
       <div className="box box6">
-        <ChartBox {...chartBoxRevenue} />
+        <LineChartBox {...chartBoxRevenue} />
       </div>
-      <div className="box box7">Box7</div>
+      <div className="box box7">
+        <AreaChartBox title="Revenue Analytics" chartData={areaChartData} />
+      </div>
       <div className="box box8">
         <BarChartBox {...barChartBoxVisit} />
       </div>

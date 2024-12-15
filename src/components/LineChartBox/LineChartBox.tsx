@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Line, LineChart, ResponsiveContainer, Tooltip } from "recharts";
-import "./ChartBox.scss";
+import "./LineChartBox.scss";
 
 interface Props {
   title: string;
@@ -12,7 +12,7 @@ interface Props {
   percentage: number;
 }
 
-const ChartBox = ({
+const LineChartBox = ({
   title,
   number,
   icon,
@@ -22,7 +22,7 @@ const ChartBox = ({
   percentage,
 }: Props) => {
   return (
-    <div className="chartBox">
+    <div className="lineChartBox">
       <div className="boxInfo">
         <div className="title">
           <img src={icon} alt="user" />
@@ -69,4 +69,4 @@ const ChartBox = ({
   );
 };
 
-export default ChartBox;
+export default LineChartBox;
