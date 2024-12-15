@@ -13,7 +13,7 @@ const BarChartBox = ({ title, chartData, dataKey, color }: Props) => {
     <div className="barChartBox">
       <h1>{title}</h1>
       <div className="chart">
-        <ResponsiveContainer width="99%" height={150}>
+        <ResponsiveContainer width="100%" height={150}>
           <BarChart
             data={chartData}
             margin={{ top: 5, right: 10, left: 20, bottom: 5 }}

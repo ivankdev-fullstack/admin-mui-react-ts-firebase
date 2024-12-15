@@ -19,7 +19,7 @@ const AreaChartBox = ({ title, chartData }: Props) => {
     <div className="areaChart">
       <h1>{title}</h1>
       <div className="chart">
-        <ResponsiveContainer width="99%" height="100%">
+        <ResponsiveContainer width="100%" height="100%">
           <AreaChart
             data={chartData}
             margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
