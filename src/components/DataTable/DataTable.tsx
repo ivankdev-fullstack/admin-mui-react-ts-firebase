@@ -1,14 +1,14 @@
 import { DataGrid, GridColDef, GridToolbar } from "@mui/x-data-grid";
 import { Link } from "react-router-dom";
-import {
-  DataTableColumnType,
-  DataTableRowType,
-} from "../../pages/UsersPage/UsersPage";
+import { ProductsTableRowsType } from "../../pages/ProductsPage/ProductsPage";
+import { UsersTableRowsType } from "../../pages/UsersPage/UsersPage";
 import "./DataTable.scss";
+
+export type DataTableColumnType = GridColDef[];
 
 interface Props {
   slug: string;
-  rows: DataTableRowType;
+  rows: UsersTableRowsType | ProductsTableRowsType;
   columns: DataTableColumnType;
 }
 

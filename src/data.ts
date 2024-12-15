@@ -1,4 +1,5 @@
-import { DataTableRowType } from "./pages/UsersPage/UsersPage";
+import { ProductsTableRowsType } from "./components/ProductsTable/ProductsTable";
+import { UsersTableRowsType } from "./components/UsersTable/UsersTable";
 
 export const menu = [
   {
@@ -311,7 +312,7 @@ export const barChartBoxVisit = {
   ],
 };
 
-export const userRows: DataTableRowType = [
+export const userRows: UsersTableRowsType = [
   {
     id: 1,
     img: "https://images.pexels.com/photos/8405873/pexels-photo-8405873.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
@@ -457,7 +458,7 @@ export const userRows: DataTableRowType = [
   },
 ];
 
-export const products = [
+export const products: ProductsTableRowsType = [
   {
     id: 1,
     img: "https://store.sony.com.au/on/demandware.static/-/Sites-sony-master-catalog/default/dw1b537bbb/images/PLAYSTATION5W/PLAYSTATION5W.png",
