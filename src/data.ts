@@ -1,3 +1,5 @@
+import { DataTableRowType } from "./pages/UsersPage/UsersPage";
+
 export const menu = [
   {
     id: 1,
@@ -309,7 +311,7 @@ export const barChartBoxVisit = {
   ],
 };
 
-export const userRows = [
+export const userRows: DataTableRowType = [
   {
     id: 1,
     img: "https://images.pexels.com/photos/8405873/pexels-photo-8405873.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
