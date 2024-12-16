@@ -1,13 +1,22 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
+export const {
+  API_KEY,
+  AUTH_DOMAIN,
+  PROJECT_ID,
+  STORAGE_BUCKET,
+  SENDER_ID,
+  APP_ID,
+} = import.meta.env;
+
 const firebaseConfig = {
-  apiKey: "AIzaSyBuvaDo2Dh6teQMCQt0Bjc6UkbDSb2L3Vw",
-  authDomain: "admin-api-daba5.firebaseapp.com",
-  projectId: "admin-api-daba5",
-  storageBucket: "admin-api-daba5.firebasestorage.app",
-  messagingSenderId: "219641684153",
-  appId: "1:219641684153:web:b73f476653d1a5cce97b68",
+  apiKey: API_KEY,
+  authDomain: AUTH_DOMAIN,
+  projectId: PROJECT_ID,
+  storageBucket: STORAGE_BUCKET,
+  messagingSenderId: SENDER_ID,
+  appId: APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);
