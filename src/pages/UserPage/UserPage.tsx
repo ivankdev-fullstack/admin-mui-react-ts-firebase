@@ -1,9 +1,9 @@
-import Single from "../../components/SingleEntityInfo/SingleEntityInfo";
+import SingleEntityInfo from "../../components/SingleEntityInfo/SingleEntityInfo";
 import { singleUser } from "../../data";
 import "./UserPage.scss";
 
 const UserPage = () => {
-  return <Single {...singleUser} />;
+  return <SingleEntityInfo {...singleUser} />;
 };
 
 export default UserPage;

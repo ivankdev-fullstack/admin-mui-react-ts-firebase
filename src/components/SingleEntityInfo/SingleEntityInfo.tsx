@@ -32,9 +32,9 @@ const SingleEntityInfo = ({ title, img, info, chart, activities }: Props) => {
             <button>Update</button>
           </div>
           <div className="details">
-            {Object.entries(info).map((item) => (
-              <div className="item" key={item[0]}>
-                <span className="itemTitle">{item[0]}</span>
+            {Object.entries(info).map((item, idx) => (
+              <div className="item" key={idx}>
+                <span className="itemTitle">{item[0]}:</span>
                 <span className="itemValue">{item[1]}</span>
               </div>
             ))}
@@ -57,8 +57,9 @@ const SingleEntityInfo = ({ title, img, info, chart, activities }: Props) => {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                {chart.dataKeys.map((dataKey) => (
+                {chart.dataKeys.map((dataKey, idx) => (
                   <Line
+                    key={idx}
                     type="monotone"
                     dataKey={dataKey.name}
                     stroke={dataKey.color}
@@ -73,8 +74,8 @@ const SingleEntityInfo = ({ title, img, info, chart, activities }: Props) => {
         <h2>Latest Activities</h2>
         {activities && (
           <ul>
-            {activities.map((activity) => (
-              <li key={activity.text}>
+            {activities.map((activity, idx) => (
+              <li key={idx}>
                 <div>
                   <p>{activity.text}</p>
                   <time>{activity.time}</time>
