@@ -1,6 +1,6 @@
 # Description
 
-Gamehub static site that renders game cards. It deals with filtering by platforms or genres and sorting in different ways.
+Admin Panel App is a simple app which allows you to manage users and products. You can view, create and delete both. Also, homepage is represented with beautiful charts created with using Recharts.js library.
 
 ## Techonologies used
 
