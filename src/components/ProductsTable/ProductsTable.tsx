@@ -1,17 +1,8 @@
-import DataTable, { DataTableColumnType } from "../DataTable/DataTable";
+import { GridColDef } from "@mui/x-data-grid";
+import { ProductsTableRowsType } from "../../interfaces/products";
+import DataTable from "../DataTable/DataTable";
 
-export type ProductsTableRowsType = {
-  id: number;
-  img: string;
-  title: string;
-  color: string;
-  producer: string;
-  price: string;
-  createdAt: string;
-  inStock?: boolean;
-}[];
-
-export const productColumns: DataTableColumnType = [
+export const productColumns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 90 },
   {
     field: "img",
@@ -58,7 +49,7 @@ export const productColumns: DataTableColumnType = [
 ];
 
 interface Props {
-  products: ProductsTableRowsType;
+  products: ProductsTableRowsType[];
 }
 
 const ProductsTable = ({ products }: Props) => {

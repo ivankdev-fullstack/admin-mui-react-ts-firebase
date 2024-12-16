@@ -1,19 +1,14 @@
-import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import NewTableItemForm from "../../components/NewTableItemForm/NewTableItemForm";
 import ProductsTable, {
   productColumns,
 } from "../../components/ProductsTable/ProductsTable";
-import { CACHE_PRODUCTS } from "../../data/queryKeys";
-import { productRepository } from "../../firebase/api/product";
+import { useProducts } from "../../hooks/useProducts";
 import "./ProductsPage.scss";
 
 const ProductsPage = () => {
   const [isOpen, setOpen] = useState(false);
-  const { data, isLoading } = useQuery({
-    queryKey: [CACHE_PRODUCTS],
-    queryFn: () => productRepository.getAll(),
-  });
+  const { data, isLoading } = useProducts();
 
   return (
     <div className="products">
@@ -21,7 +16,7 @@ const ProductsPage = () => {
         <h1>Products</h1>
         <button onClick={() => setOpen(true)}>Add New Product</button>
       </div>
-      {isLoading ? "Loading..." : <ProductsTable products={data as any} />}
+      {isLoading ? "Loading..." : <ProductsTable products={data!} />}
       {isOpen && (
         <NewTableItemForm
           slug="product"

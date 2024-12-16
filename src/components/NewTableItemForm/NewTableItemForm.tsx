@@ -1,13 +1,13 @@
+import { GridColDef } from "@mui/x-data-grid";
 import { useForm } from "react-hook-form";
 import { queryClient } from "../../App";
 import { productRepository } from "../../firebase/api/product";
 import { userRepository } from "../../firebase/api/user";
-import { DataTableColumnType } from "../DataTable/DataTable";
 import "./NewTableItemForm.scss";
 
 interface Props {
   slug: "user" | "product";
-  columns: DataTableColumnType;
+  columns: GridColDef[];
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
@@ -18,13 +18,11 @@ const NewTableItemForm = ({ slug, columns, setOpen }: Props) => {
     if (slug === "user") {
       await userRepository.save(data);
     } else {
-      await productRepository.initData();
+      await productRepository.save(data);
     }
     setOpen(false);
     queryClient.invalidateQueries([`${slug.toUpperCase()}S`]);
   });
-
-  console.log(slug);
 
   return (
     <div className="form-container">

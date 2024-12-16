@@ -5,22 +5,11 @@ import {
   doc,
   getDocs,
 } from "firebase/firestore";
-import { userRows } from "../../data";
+import { UsersTableRowsType } from "../../interfaces/users";
 import { db } from "../db";
 
 class UserRepository {
   TABLE_NAME = "users";
-
-  async initData() {
-    try {
-      userRows.forEach(async (user) => {
-        await addDoc(collection(db, this.TABLE_NAME), user);
-      });
-    } catch (e) {
-      console.log(e);
-      return null;
-    }
-  }
 
   async getAll() {
     try {
@@ -33,7 +22,7 @@ class UserRepository {
         });
       });
 
-      return data;
+      return data as UsersTableRowsType[];
     } catch (e) {
       console.log(e);
       return null;

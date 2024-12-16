@@ -4,16 +4,14 @@ import { Link } from "react-router-dom";
 import { queryClient } from "../../App";
 import { productRepository } from "../../firebase/api/product";
 import { userRepository } from "../../firebase/api/user";
-import { ProductsTableRowsType } from "../ProductsTable/ProductsTable";
-import { UsersTableRowsType } from "../UsersTable/UsersTable";
+import { UsersTableRowsType } from "../../interfaces/users";
 import "./DataTable.scss";
-
-export type DataTableColumnType = GridColDef[];
+import { ProductsTableRowsType } from "../../interfaces/products";
 
 interface Props {
   slug: "users" | "products";
-  rows: UsersTableRowsType | ProductsTableRowsType;
-  columns: DataTableColumnType;
+  rows: UsersTableRowsType[] | ProductsTableRowsType[];
+  columns: GridColDef[];
 }
 
 const DataTable = ({ slug, rows, columns }: Props) => {

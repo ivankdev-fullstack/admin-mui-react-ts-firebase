@@ -1,5 +1,5 @@
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
-import { PieChartDataType } from "../../data";
+import { PieChartDataType } from "../../interfaces/charts";
 import "./PieChartBox.scss";
 
 interface Props {

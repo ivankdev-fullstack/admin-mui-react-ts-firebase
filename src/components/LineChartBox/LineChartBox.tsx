@@ -6,7 +6,7 @@ interface Props {
   title: string;
   number: number | string;
   icon: string;
-  chartData: Object[];
+  chartData: object[];
   dataKey: string;
   color: string;
   percentage: number;

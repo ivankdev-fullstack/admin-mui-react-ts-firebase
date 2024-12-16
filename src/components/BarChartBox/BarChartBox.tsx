@@ -3,7 +3,7 @@ import "./BarChartBox.scss";
 
 interface Props {
   title: string;
-  chartData: Object[];
+  chartData: object[];
   dataKey: string;
   color: string;
 }

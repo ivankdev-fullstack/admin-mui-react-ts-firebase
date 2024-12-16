@@ -6,7 +6,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { AreaChartDataType } from "../../data";
+import { AreaChartDataType } from "../../interfaces/charts";
 import "./AreaChartBox.scss";
 
 interface Props {

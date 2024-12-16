@@ -12,7 +12,7 @@ import {
   chartBoxRevenue,
   chartBoxUser,
   pieChartData,
-} from "../../data";
+} from "../../data/chartsData.ts";
 import "./Homepage.scss";
 
 const Homepage = () => {

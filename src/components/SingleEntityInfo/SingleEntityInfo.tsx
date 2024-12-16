@@ -29,7 +29,6 @@ const SingleEntityInfo = ({ title, img, info, chart, activities }: Props) => {
           <div className="topInfo">
             {img && <img src={img} alt="" />}
             <h1>{title}</h1>
-            <button>Update</button>
           </div>
           <div className="details">
             {Object.entries(info).map((item, idx) => (

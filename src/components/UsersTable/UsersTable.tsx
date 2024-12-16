@@ -1,17 +1,8 @@
-import DataTable, { DataTableColumnType } from "../DataTable/DataTable";
+import { GridColDef } from "@mui/x-data-grid";
+import { UsersTableRowsType } from "../../interfaces/users";
+import DataTable from "../DataTable/DataTable";
 
-export type UsersTableRowsType = {
-  id: number;
-  img: string;
-  lastName: string;
-  firstName: string;
-  email: string;
-  phone: string;
-  createdAt: string;
-  verified?: boolean;
-}[];
-
-export const userColumns: DataTableColumnType = [
+export const userColumns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 90 },
   {
     field: "img",
@@ -43,22 +34,10 @@ export const userColumns: DataTableColumnType = [
     headerName: "Phone",
     width: 200,
   },
-  {
-    field: "createdAt",
-    headerName: "Created At",
-    width: 200,
-    type: "string",
-  },
-  {
-    field: "verified",
-    headerName: "Verified",
-    width: 150,
-    type: "boolean",
-  },
 ];
 
 interface Props {
-  users: UsersTableRowsType;
+  users: UsersTableRowsType[];
 }
 
 const UsersTable = ({ users }: Props) => {
